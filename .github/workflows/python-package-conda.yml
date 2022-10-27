@@ -38,7 +38,7 @@ jobs:
         
         python3 main.py <<EOF
        # ${pmode}
-       ## ${pkey}
+       # ${pkey}
        # ${user}
        # ${pwd}
        # ${step}
