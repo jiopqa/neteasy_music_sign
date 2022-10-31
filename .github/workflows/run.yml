@@ -2,11 +2,9 @@ name: 网易云音乐签到
 
 on:
   push:
-    branches:
-    - main
+    branches: [ main ]
   pull_request:
-    branches:
-    - main 
+    branches: [ master ]
   schedule:
     - cron: '0 23 * * *'
  # watch:
@@ -29,6 +27,7 @@ jobs:
         python-version: 3.7
     - name: 开始
       run: |
+        python -m pip install --upgrade pip
         pip install -r requirements.txt
         #pmode='${{ secrets.PMODE }}'
         #pkey='${{ secrets.PKEY }}'
