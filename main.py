@@ -172,6 +172,34 @@ class Task(object):
             self.log('用户:' + self.name + '  Bark推送成功')
         else:
             self.log('用户:' + self.name + '  bark推送失败,请检查appToken和uid是否正确')
+    
+    
+    '''
+    推送pushplus
+    '''
+    def push_pushplus(self):
+        if self.ppkey == '':
+            print("[注意] 未提供token，不进行pushplus推送！")
+        else:
+            self.diyText()
+            server_url = f"http://www.pushplus.plus/send"
+            params = {
+                "token": self.ppkey,
+                "title": self.title,
+                "content": self.content,
+                "template": "json"
+            }
+
+            response = requests.get(server_url, params=params)
+            print(f"[{response}]")
+
+            json_data = response.json()
+            print(f"[{json_data}]")
+
+            if json_data['code'] == 200:
+                print(f"[{now}] 推送成功。")
+            else:
+                print(f"[{now}] 推送失败：{json_data['code']}({json_data['msg']})")
 
     '''
     自定义要推送到微信的内容
@@ -312,6 +340,8 @@ class Task(object):
                 self.wxpusher()
             elif self.pushmethod.lower() == 'bark':
                 self.bark()
+            elif self.pushmethod.lower() == 'pushplus':
+                self.push_pushplus()
             else:
                 self.server()
         except:
@@ -339,6 +369,7 @@ def init():
     peopleSwitch = config.getboolean('setting','peopleSwitch')
     pushmethod = config['setting']['pushmethod']
     sckey = config['setting']['sckey']
+    ppkey = config['setting']['ppkey']
     appToken = config['setting']['appToken']
     wxpusheruid = config['setting']['wxpusheruid']
     barkServer = config['setting']['barkServer']
@@ -355,6 +386,7 @@ def init():
             'peopleSwitch':peopleSwitch,
             'pushmethod':pushmethod,
             'sckey':sckey,
+            'ppkey':ppkey,
             'appToken':appToken,
             'wxpusheruid':wxpusheruid,
             'barkServer':barkServer,
