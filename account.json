@@ -1,14 +1,14 @@
 [
     {
         "countrycode": 86,
-        "account": "ZainCheung@163.com",
-        "password": "10ca5e4c316f81c5d9b56702********",
+        "account": "",
+        "password": "",
         "al_id": 12345678,
-        "sckey": "SCU97783T70c13167b4daa422f4d419a765eb4ebb5ebc9********",
+        "sckey": "",
         "pushmethod": "",
         "appToken": "",
         "wxpusheruid": "",
-        "barkServer": "https://api.day.app",
+        "barkServer": "",
         "barkKey": ""
     }
 ]
