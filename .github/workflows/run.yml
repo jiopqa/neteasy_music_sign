@@ -25,6 +25,9 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip3 install -r requirements.txt
+        
+    - name: 开始签到
+      env: |
         uin=${{ secrets.ACCOUNT }}
         pwd=${{ secrets.PASSWORD }}
         al_id=${{ secrets.ALID }}
@@ -39,21 +42,5 @@ jobs:
         wxpusheruid=${{ secrets.WXPUSHRUID }}
         barkServer=${{ secrets.BARKSERVER }}
         barkKey=${{ secrets.BARKKEY }}
-    - name: 开始签到
-      run: |
-        python3 main.py <<EOF
-        ${uin}
-        ${pwd}
-        ${al_id}
-        ${countrycode}
-        ${api}
-        ${md5Switch}
-        ${peopleSwitch}
-        ${pushmethod}
-        ${sckey}
-        ${ppkey}
-        ${appToken}
-        ${wxpusheruid}
-        ${barkServer}
-        ${barkKey}
-        EOF
+      run: 
+        python3 main.py
