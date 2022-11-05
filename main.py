@@ -377,7 +377,7 @@ def init():
     #barkKey = config['setting']['barkKey']
     
     uin = input()
-    print("uin="uin)
+    print("uin="+uin)
     pwd = input()
     al_id = input()
     countrycode = input()
