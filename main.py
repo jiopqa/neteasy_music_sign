@@ -409,6 +409,8 @@ def init():
             'barkServer':barkServer,
             'barkKey':barkKey
         }
+    print(conf)   
+    
     return conf
 
 '''
