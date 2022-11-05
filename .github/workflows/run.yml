@@ -26,8 +26,8 @@ jobs:
         python -m pip install --upgrade pip
         pip3 install -r requirements.txt
 
-        uin = '${{ secrets.UID }}'
-        pwd ='${{ secrets.PWD }}'
+        uin = '${{ secrets.ACCOUNT }}'
+        pwd ='${{ secrets.PASSWORD }}'
         al_id = '${{ secrets.ALID }}'
         countrycode = '${{ secrets.COUNTRYCODE }}'
         api = '${{ secrets.API }}'
