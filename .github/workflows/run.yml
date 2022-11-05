@@ -27,7 +27,7 @@ jobs:
         pip3 install -r requirements.txt
         
     - name: 开始签到
-      env: |
+      env: 
         uin: ${{ secrets.ACCOUNT }}
         pwd: ${{ secrets.PASSWORD }}
         al_id: ${{ secrets.ALID }}
