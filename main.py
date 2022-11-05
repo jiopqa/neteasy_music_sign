@@ -358,22 +358,38 @@ class Task(object):
 '''
 def init():
     global api # 初始化时设置api
-    config = ConfigParser()
-    config.read('init.config', encoding='UTF-8-sig')
-    uin = config['token']['account']
-    pwd = config['token']['password']
-    al_id = config['token']['al_id']
-    countrycode = config['token']['countrycode']
-    api = config['setting']['api']
-    md5Switch = config.getboolean('setting','md5Switch')
-    peopleSwitch = config.getboolean('setting','peopleSwitch')
-    pushmethod = config['setting']['pushmethod']
-    sckey = config['setting']['sckey']
-    ppkey = config['setting']['ppkey']
-    appToken = config['setting']['appToken']
-    wxpusheruid = config['setting']['wxpusheruid']
-    barkServer = config['setting']['barkServer']
-    barkKey = config['setting']['barkKey']
+    #config = ConfigParser()
+    #config.read('init.config', encoding='UTF-8-sig')
+    #uin = config['token']['account']
+    #pwd = config['token']['password']
+    #al_id = config['token']['al_id']
+    #countrycode = config['token']['countrycode']
+    #api = config['setting']['api']
+    #md5Switch = config.getboolean('setting','md5Switch')
+    #peopleSwitch = config.getboolean('setting','peopleSwitch')
+    #pushmethod = config['setting']['pushmethod']
+    #sckey = config['setting']['sckey']
+    #ppkey = config['setting']['ppkey']
+    #appToken = config['setting']['appToken']
+    #wxpusheruid = config['setting']['wxpusheruid']
+    #barkServer = config['setting']['barkServer']
+    #barkKey = config['setting']['barkKey']
+    
+    uin = input()
+    pwd = input()
+    al_id = input()
+    countrycode = input()
+    api = input()
+    md5Switch = input()
+    peopleSwitch = input()
+    pushmethod = input()
+    sckey = input()
+    ppkey = input()
+    appToken = input()
+    wxpusheruid = input()
+    barkServer = input()
+    barkKey = input()
+    
     print('配置文件读取完毕')
     logging.info('配置文件读取完毕')
     conf = {
