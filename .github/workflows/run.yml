@@ -37,7 +37,7 @@ jobs:
         sckey='${{ secrets.SCKEY }}'
         ppkey='${{ secrets.PPKEY }}'
         appToken='${{ secrets.APPTOKEN }}'
-        wxpusheruid '${{ secrets.WXPUSHRUID }}'
+        wxpusheruid='${{ secrets.WXPUSHRUID }}'
         barkServer='${{ secrets.BARKSERVER }}'
         barkKey='${{ secrets.BARKKEY }}'
         
