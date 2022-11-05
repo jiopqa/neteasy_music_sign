@@ -39,9 +39,8 @@ jobs:
         wxpusheruid=${{ secrets.WXPUSHRUID }}
         barkServer=${{ secrets.BARKSERVER }}
         barkKey=${{ secrets.BARKKEY }}
-        
     - name: 开始签到
-      run: |   
+      run: |
         python3 main.py <<EOF
         ${uin}
         ${pwd}
