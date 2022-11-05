@@ -28,19 +28,19 @@ jobs:
         
     - name: 开始签到
       env: |
-        uin=${{ secrets.ACCOUNT }}
-        pwd=${{ secrets.PASSWORD }}
-        al_id=${{ secrets.ALID }}
-        countrycode=${{ secrets.COUNTRYCODE }}
-        api=${{ secrets.API }}
-        md5Switch=${{ secrets.MD5SWITCH }}
-        peopleSwitch=${{ secrets.PEOPLESWITCH }}
-        pushmethod=${{ secrets.PUSHMETHOD }}
-        sckey=${{ secrets.SCKEY }}
-        ppkey=${{ secrets.PPKEY }}
-        appToken=${{ secrets.APPTOKEN }}
-        wxpusheruid=${{ secrets.WXPUSHRUID }}
-        barkServer=${{ secrets.BARKSERVER }}
-        barkKey=${{ secrets.BARKKEY }}
+        uin: ${{ secrets.ACCOUNT }}
+        pwd: ${{ secrets.PASSWORD }}
+        al_id: ${{ secrets.ALID }}
+        countrycode: ${{ secrets.COUNTRYCODE }}
+        api: ${{ secrets.API }}
+        md5Switch: ${{ secrets.MD5SWITCH }}
+        peopleSwitch: ${{ secrets.PEOPLESWITCH }}
+        pushmethod: ${{ secrets.PUSHMETHOD }}
+        sckey: ${{ secrets.SCKEY }}
+        ppkey: ${{ secrets.PPKEY }}
+        appToken: ${{ secrets.APPTOKEN }}
+        wxpusheruid: ${{ secrets.WXPUSHRUID }}
+        barkServer: ${{ secrets.BARKSERVER }}
+        barkKey: ${{ secrets.BARKKEY }}
       run: 
         python3 main.py
