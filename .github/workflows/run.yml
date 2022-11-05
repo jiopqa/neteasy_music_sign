@@ -26,20 +26,20 @@ jobs:
         python -m pip install --upgrade pip
         pip3 install -r requirements.txt
 
-        uin = '${{ secrets.ACCOUNT }}'
-        pwd ='${{ secrets.PASSWORD }}'
-        al_id = '${{ secrets.ALID }}'
-        countrycode = '${{ secrets.COUNTRYCODE }}'
-        api = '${{ secrets.API }}'
-        md5Switch = '${{ secrets.MD5SWITCH }}'
-        peopleSwitch = '${{ secrets.PEOPLESWITCH }}'
-        pushmethod = '${{ secrets.PUSHMETHOD }}'
-        sckey = '${{ secrets.SCKEY }}'
-        ppkey = '${{ secrets.PPKEY }}'
-        appToken = '${{ secrets.APPTOKEN }}'
-        wxpusheruid = '${{ secrets.WXPUSHRUID }}'
-        barkServer = '${{ secrets.BARKSERVER }}'
-        barkKey = '${{ secrets.BARKKEY }}'
+        uin='${{ secrets.ACCOUNT }}'
+        pwd='${{ secrets.PASSWORD }}'
+        al_id='${{ secrets.ALID }}'
+        countrycode='${{ secrets.COUNTRYCODE }}'
+        api='${{ secrets.API }}'
+        md5Switch='${{ secrets.MD5SWITCH }}'
+        peopleSwitch='${{ secrets.PEOPLESWITCH }}'
+        pushmethod='${{ secrets.PUSHMETHOD }}'
+        sckey='${{ secrets.SCKEY }}'
+        ppkey='${{ secrets.PPKEY }}'
+        appToken='${{ secrets.APPTOKEN }}'
+        wxpusheruid '${{ secrets.WXPUSHRUID }}'
+        barkServer='${{ secrets.BARKSERVER }}'
+        barkKey='${{ secrets.BARKKEY }}'
         
         
     - name: 开始签到
