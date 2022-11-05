@@ -376,21 +376,21 @@ def init():
     #barkServer = config['setting']['barkServer']
     #barkKey = config['setting']['barkKey']
     
-    uin = input()
+    uin = os.environ["uin"]
     print("uin="+uin)
-    pwd = input()
-    al_id = input()
-    countrycode = input()
-    api = input()
-    md5Switch = input()
-    peopleSwitch = input()
-    pushmethod = input()
-    sckey = input()
-    ppkey = input()
-    appToken = input()
-    wxpusheruid = input()
-    barkServer = input()
-    barkKey = input()
+    pwd = os.environ["pwd"]
+    al_id = os.environ["al_id"]
+    countrycode = os.environ["countrycode"]
+    api = os.environ["api"]
+    md5Switch = os.environ["md5Switch"]
+    peopleSwitch = os.environ["peopleSwitch"]
+    pushmethod = os.environ["pushmethod"]
+    sckey = os.environ["sckey"]
+    ppkey = os.environ["ppkey"]
+    appToken = os.environ["appToken"]
+    wxpusheruid = os.environ["wxpusheruid"]
+    barkServer = os.environ["barkServer"]
+    barkKey = os.environ["barkKey"]
     
     print('配置文件读取完毕')
     logging.info('配置文件读取完毕')
