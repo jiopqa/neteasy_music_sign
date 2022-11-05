@@ -25,7 +25,38 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip3 install -r requirements.txt
+
+        uin = '${{ secrets.UID }}'
+        pwd ='${{ secrets.PWD }}'
+        al_id = '${{ secrets.ALID }}'
+        countrycode = '${{ secrets.COUNTRYCODE }}'
+        api = '${{ secrets.API }}'
+        md5Switch = '${{ secrets.MD5SWITCH }}'
+        peopleSwitch = '${{ secrets.PEOPLESWITCH }}'
+        pushmethod = '${{ secrets.PUSHMETHOD }}'
+        sckey = '${{ secrets.SCKEY }}'
+        ppkey = '${{ secrets.PPKEY }}'
+        appToken = '${{ secrets.APPTOKEN }}'
+        wxpusheruid = '${{ secrets.WXPUSHRUID }}'
+        barkServer = '${{ secrets.BARKSERVER }}'
+        barkKey = '${{ secrets.BARKKEY }}'
+        
         
     - name: 开始签到
       run: |   
-        python3 main.py
+        python3 main.py <<EOF
+        ${uin}
+        ${pwd}
+        ${al_id}
+        ${countrycode}
+        ${api}
+        ${md5Switch}
+        ${peopleSwitch}
+        ${pushmethod}
+        ${sckey}
+        ${ppkey}
+        ${appToken}
+        ${wxpusheruid}
+        ${barkServer}
+        ${barkKey}
+        EOF
