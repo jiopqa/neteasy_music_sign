@@ -348,6 +348,17 @@ class Task(object):
         except:
             self.log('用户任务执行中断,请检查账号密码是否正确')
             logging.error('用户任务执行中断,请检查账号密码是否正确========================================')
+            self.list.append("- 打卡结束\n\n")
+            self.list.append("- 消息推送\n\n")
+            self.dakaSongs_list = ''.join(self.list)
+            if self.pushmethod.lower() == 'wxpusher':
+                self.wxpusher()
+            elif self.pushmethod.lower() == 'bark':
+                self.bark()
+            elif self.pushmethod.lower() == 'pushplus':
+                self.push_pushplus()
+            else:
+                self.server()
         else:
             self.log('用户:' + self.name + '  今日任务已完成')
             logging.info('用户:' + self.name + '  今日任务已完成========================================')
