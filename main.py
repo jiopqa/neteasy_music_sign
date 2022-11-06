@@ -377,20 +377,33 @@ def init():
     #barkKey = config['setting']['barkKey']
     
     uin = os.environ["uin"]
-    print("uin="+uin)
+    print("uin is", uin)
     pwd = os.environ["pwd"]
+    print("pwd is", pwd)
     al_id = os.environ["al_id"]
+    print("al_id is", al_id)
     countrycode = os.environ["countrycode"]
+    print("countrycode is", countrycode)
     api = os.environ["api"]
+    print("api is", api)
     md5Switch = os.environ["md5Switch"]
+    print("md5Switch is", md5Switch)
     peopleSwitch = os.environ["peopleSwitch"]
+    print("peopleSwitch is", peopleSwitch)
     pushmethod = os.environ["pushmethod"]
+    print("pushmethod is", pushmethod)
     sckey = os.environ["sckey"]
+    print("sckey is", sckey)
     ppkey = os.environ["ppkey"]
+    print("ppkey is", ppkey)
     appToken = os.environ["appToken"]
+    print("appToken is", appToken)
     wxpusheruid = os.environ["wxpusheruid"]
+    print("wxpusheruid is", wxpusheruid)
     barkServer = os.environ["barkServer"]
+    print("barkServer is", barkServer)
     barkKey = os.environ["barkKey"]
+    print("barkKey is", barkKey)
     
     print('配置文件读取完毕')
     logging.info('配置文件读取完毕')
@@ -409,8 +422,7 @@ def init():
             'wxpusheruid':wxpusheruid,
             'barkServer':barkServer,
             'barkKey':barkKey
-        }
-    print(conf)   
+        }  
     
     return conf
 
